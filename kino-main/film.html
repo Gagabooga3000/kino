@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кинотеатр</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3f3f3f;
+            margin: 0;
+            padding: 0;
+        }
+
+        .full-screen-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url(images/zadniy.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            color: white;
+        }
+
+        nav {
+            background-color: transparent;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .cinema-hall {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 50px;
+            margin: 50px;
+            max-width: 1000px;
+        }
+
+        .seat {
+            width: 80px;
+            height: 50px;
+            border: 1px solid #eb27baf6;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .available {
+            background-color: #ae00ff;
+        }
+
+        .booked {
+            background-color: rgb(255, 22, 22);
+            cursor: not-allowed;
+        }
+
+        .seat:hover.available {
+            background-color: #941ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="full-screen-image"></div>
+    <div class="content">
+        <nav>
+            <ul>
+                <li><a href="index.html" class="button">Главная</a></li>
+                <li><a href="zal.html" class="button">Зал</a></li>
+                <li><a href="chart.html" class="button">Расписание</a></li>
+                <li><a href="film.html" class="button">Фильмы</a></li>
+                <li><a href="map.html" class="button">Карта кинозала</a></li>
+            </ul>
+        </nav>
+        
+    </div>
+</body>
+</html>
